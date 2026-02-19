@@ -1,0 +1,35 @@
+version: '3.9'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: myapp
+    environment:
+      - PYTHONUNBUFFERED=1
+      - ENV=development
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    command: python -m myapp.main
+    restart: unless-stopped
+
+  # Optional: Add database service
+  # db:
+  #   image: postgres:15
+  #   container_name: myapp_db
+  #   environment:
+  #     POSTGRES_USER: appuser
+  #     POSTGRES_PASSWORD: password
+  #     POSTGRES_DB: myapp_db
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   restart: unless-stopped
+
+volumes:
+  # postgres_data:
+  pass:

@@ -1,0 +1,22 @@
+# Production dependencies
+# Pin specific versions for reproducibility in production
+
+# Web framework (uncomment if needed)
+# Flask==3.0.0
+# fastapi==0.109.0
+# uvicorn==0.27.0
+
+# Database (uncomment if needed)
+# sqlalchemy==2.0.23
+# psycopg2-binary==2.9.9
+
+# Data validation
+# pydantic==2.5.0
+
+# Utilities
+requests==2.31.0
+python-dotenv==1.0.0
+click==8.1.7
+
+# Logging
+python-json-logger==2.0.7
